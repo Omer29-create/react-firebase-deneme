@@ -18,7 +18,7 @@ const Todo = () => {
     );*/
 
   const [input, setInput] = useState("");
-  console.log(input);
+    console.log(input);
   const [load, setLoad] = useState([]);
 
   const ekle = (e) => {
@@ -55,14 +55,13 @@ const Todo = () => {
 
   const getTodos = async (db) => {
 
-    const collRe = collection(db, "adana")
+  const collRe = collection(db, "adana")
 
-    const todoSch = await getDocs(collRe)
+  const todoSch = await getDocs(collRe)
 
     console.log(todoSch);
   }
   
-
   useEffect(() => {
     getTodos();
   }, [])
