@@ -2,15 +2,13 @@ import React, { useRef, useState } from 'react';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from './Firebase'
 
-
 const Register = () => {
 
-
 const [dene, setDene] = useState();
+    
 const nameRef = useRef();
 const mailRef = useRef();
 const passwordRef = useRef();
-
 
 const handle = async (e) => {
     e.preventDefault()
@@ -25,9 +23,7 @@ const handle = async (e) => {
         passwordRef.current.value
     )
     console.log(dene)
-
 }
-
 
     return (
         <div>
